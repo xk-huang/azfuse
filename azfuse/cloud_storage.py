@@ -14,7 +14,7 @@ import shutil
 import multiprocessing as mp
 import os.path as op
 from .common import ensure_remove_dir
-from azure.storage.blob import BlockBlobService
+from azure.v1.storage.blob import BlockBlobService
 from azure.storage.common.storageclient import logger
 import glob
 from pprint import pformat
@@ -770,7 +770,7 @@ class CloudStorage(object):
         return list(self.iter_blob_info(prefix, creation_time_larger_than))
 
     def get_url(self, blob_name):
-        from azure.storage.blob.models import BlobPermissions
+        from azure.v1.storage.blob.models import BlobPermissions
         permission = BlobPermissions(read=True)
         import datetime
         expiry = datetime.datetime.now() + datetime.timedelta(days=30)
