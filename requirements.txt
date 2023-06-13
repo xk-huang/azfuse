@@ -1,4 +1,4 @@
-git+https://github.com/xk-huang/azure-storage-python.git#subdirectory=azure-storage-blob
+azure-storage-blob4azfuse@git+https://github.com/xk-huang/azure-storage-python.git#subdirectory=azure-storage-blob
 deprecated
 psutil
 tqdm
